@@ -153,3 +153,13 @@ window.addEventListener("beforeunload", function () {
     sessionUserAttemptsKey
   );
 });
+
+// hapus data storage
+destroyDataButton.addEventListener("click", function () {
+  sessionStorage.removeItem(sessionAnswerKey);
+  sessionStorage.removeItem(sessionUserAttemptsKey);
+  sessionStorage.removeItem(sessionUserIsPlayingKey);
+  localStorage.removeItem(localTotalVictoryKey);
+  localStorage.removeItem(localMaximumAttemptsKey);
+  alert("Mohon me-refresh halaman ini kembali");
+});
